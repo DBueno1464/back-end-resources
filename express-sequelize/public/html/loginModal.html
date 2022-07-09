@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <!-- Button to open the LOGIN modal login form -->
+    <button id="login-btn">Login</button>
+
+    <!-- Button to open the REGISTER modal login form -->
+    <button id="register-btn">Register</button>
+
+    <!-- The LOGIN Modal -->
+    <div id="login-modal" class="modal">
+      <span id="span-close" class="close span-close" title="Close Modal"
+        >&times;</span
+      >
+
+      <!-- Modal Content -->
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="container">
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="mail@mail.com"
+            name="log-email"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="log-psw"
+            required
+          />
+
+          <button id="user-login-btn" type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button id="cancel-btn-login" type="button" class="cancelbtn">
+            Cancel
+          </button>
+          <!-- Add this to change between modals, NOT CONGIGURED YET -->
+          <!-- <button type="button" class="registerbtnmodal">Register</button> -->
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <!-- The REGISTER Modal -->
+    <div id="register-modal" class="modal">
+      <span id="span-close" class="close span-close" title="Close Modal"
+        >&times;</span
+      >
+
+      <!-- Modal Content -->
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="container">
+          <label for="fname"><b>First name</b></label>
+          <input
+            type="text"
+            placeholder="First name"
+            name="reg-fname"
+            required
+          />
+          <label for="lname"><b>Last name</b></label>
+          <input
+            type="text"
+            placeholder="Last name"
+            name="reg-lname"
+            required
+          />
+          <!-- New roles test, start -->
+          <label for="state"><b>State</b></label>
+          <input type="text" placeholder="New York" name="reg-state" required />
+
+          <label for="sport"><b>Sport</b></label>
+          <input type="text" placeholder="Baseball" name="reg-sport" required />
+
+          <label for="role"><b>Role</b></label>
+          <input type="text" placeholder="Shortstop" name="reg-role" required />
+          <!-- new roles test, end -->
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="email@mail.com"
+            name="reg-email"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="reg-psw"
+            required
+          />
+
+          <button id="register-btn-add-user" type="submit" class="register-btn">
+            Register
+          </button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button id="cancel-btn-register" type="button" class="cancelbtn">
+            Cancel
+          </button>
+          <!-- Add this to change between modals, NOT CONGIGURED YET -->
+          <!-- <button type="button" class="loginbtnmodal" class="login-btn">
+            Login
+          </button> -->
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <script src="../js/modal.js"></script>
+    <script src="../js/register.js"></script>
+    <script src="../js/login.js"></script>
+  </body>
+</html>
