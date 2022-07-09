@@ -1,1 +1,1 @@
-# bpm-hackathon
+# express-sequelize
